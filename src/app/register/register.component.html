@@ -1,1 +1,55 @@
-<p>register works!</p>
+<div class="wrapper">
+    <div class="left_part"></div>
+  
+    <div class="right_part">
+      <h2>Register</h2>
+      <form (submit)="saveData()">
+        <div class="left_textBoxes">
+          <div class="form-group">
+            <label for="name">First Name *</label>
+            <input type="text" [(ngModel)]="name" name="name" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last Name *</label>
+            <input type="text" [(ngModel)]="surname" name="surname" id="lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" [(ngModel)]="password" name="password" id="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password *</label>
+            <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" id="confirmPassword" required>
+          </div>
+        </div>
+  
+        <div class="right_textBoxes">
+          <div class="form-group">
+            <label for="email">Your Email *</label>
+            <input type="email" [(ngModel)]="email" name="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone *</label>
+            <input type="tel" [(ngModel)]="phone" name="phone" id="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="securityQuestion">Security Question *</label>
+            <select [(ngModel)]="securityQuestion" name="securityQuestion" id="securityQuestion" required>
+              <option value="">Please select your Security Question</option>
+              <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+              <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+              <option value="What was the name of your elementary school?">What was the name of your elementary school?</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="answer">Enter Your Answer *</label>
+            <input type="text" [(ngModel)]="answer" name="answer" id="answer" required>
+          </div>
+        
+           <button type="submit" [disabled]="!isFormValid()">Register</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  

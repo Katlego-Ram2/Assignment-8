@@ -9,21 +9,33 @@
 <body>
     <div class="wrapper">
         <div class="left_part">
-
+          <div class="topHeader">
+            <img src="../../assets/mainIcon.png" alt="icon" width="10%" height="10%">
+            <h2>EXCLUSIVE ADDONS</h2><br>
+            <p style="line-height: 1.5;" id="subMainHeader">FOR ELEMENTOR</p>
+          </div>
+          <div class="bottomHeader">
+            <h1>Create<br> Custom <br>Login Form</h1>
+          </div>
         </div>
         <div class="right_part">
-
-            <div class="logIn_form">
-
-                <h1>Log in</h1>
-                <input type="text" placeholder="User Name/Email Address"><br>
-                <input type="password" placeholder="Password"><br>
-                <button title="Login">Login</button>
-
+          <div class="logIn_form">
+            <h2 style="color: black;"><b>Log in</b></h2>
+            <input type="text" placeholder="User Name/Email Address" [(ngModel)]="email"><br>
+            <input type="password" placeholder="Password" [(ngModel)]="password"><br>
+            <button title="Login" (click)="login()">Log in</button>
+            <div class="remberMeWrapper">
+              <div class="chk">
+                <input title="ck" type="checkbox" id="checkbox">
+                <p style="color: black;">Remember Me</p>
+              </div>
+              <p style="color: #279F7B;">Forgot Your password?</p>
             </div>
+          </div>
         </div>
-    </div>
-    
+      </div>
+      
+          
 </body>
 
 </html>
