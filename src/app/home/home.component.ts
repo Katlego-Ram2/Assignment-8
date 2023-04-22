@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  users: string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+    this.users = storedUsers;
   }
 
 }
