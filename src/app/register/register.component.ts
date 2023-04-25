@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   saveData() {
-      const newUser = {
+      const user = {
         name: this.name,
         surname: this.surname,
         email: this.email,
@@ -39,20 +39,20 @@ export class RegisterComponent implements OnInit {
       };
     
       const users = JSON.parse(localStorage.getItem('users') || '[]');
-    
-      // Check if the user already exists
+    console.log(user);
+      // Check if the user  exists
       const existingUser = users.find((user: any) => user.email === this.email);
       if (existingUser) {
-        alert('User already exists.');
+        alert('User already exist Login');
         return;
       }
     
-      // Add the new user to the array
-      users.push(newUser);
+      // Add user to the array
+      users.push(user);
     
       localStorage.setItem('users', JSON.stringify(users));
     
-      alert('User registered successfully.');
+      alert('User Registered Successful');
       this.router.navigate(['/login']);
     }
     
@@ -60,6 +60,9 @@ export class RegisterComponent implements OnInit {
   
     isFormValid(): boolean {
       return !!this.name && !!this.surname && !!this.password && !!this.confirmPassword && !!this.email && !!this.phone && !!this.securityQuestion && !!this.answer;
+    }
+    goToLogin(){
+      this.router.navigate(['/login'])
     }
   
 }

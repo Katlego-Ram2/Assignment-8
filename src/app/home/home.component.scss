@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.lefItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+}
+.nav{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: space-between;
+    background-color:#F5F5F5 ;
+}
+.innerBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid #e0dddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin-right: 8px; 
+}

@@ -4,6 +4,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 const routes: Routes = [
   {
     path:"",pathMatch:"full",redirectTo:"login"
@@ -16,6 +19,9 @@ const routes: Routes = [
   },
   {
     path:"home",component:HomeComponent
+  },
+  {
+    path:"**",component:PageNotFoundComponent
   }
 ];
 

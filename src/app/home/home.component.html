@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Home</title>
 </head>
 <body>
-    
+   <div class="wrapper">
+    <div class="nav">
+        <div class="lefItems">
+       <div class="icon"><img src="../../assets/bars-solid.svg" height="19px" alt="img"></div> <p>Hi  {{loggedUser}}</p>
+        </div>
+        <div class="rightItems">
+            <div class="icon">  <img src="../../assets/heart-solid.svg" height="19px"  alt="img"></div><div class="icon"><img src="../../assets/share-nodes-solid.svg"  height="19px" alt="img"></div>
+        </div>
+    </div>
+    <div class="innerBody">
+            <p *ngFor="let user of users"><b>Name:</b> {{user.name}} <b>Surname:</b> {{user.surname}} <b>Email:</b> {{user.email}}</p>
+           
+      </div>
+   
+   </div>
 </body>
 </html>
